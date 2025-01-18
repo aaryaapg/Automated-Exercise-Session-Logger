@@ -1,4 +1,8 @@
 /* ______________________________________Connections______________________________________ 
+This code enables automatic tracking of elliptical workouts using RFID authentication, motion sensing, 
+and cloud logging via Firebase. The session starts when an RFID card is scanned, tracks movement using MPU6050, 
+and ends when a button is pressed, saving workout data remotely.
+
 RFID RC522    NodeMCU
 SDA  -------> D4         
 SDK  -------> D5
@@ -50,10 +54,10 @@ Button --------> NodeMCU (D8)
 #define SS_PIN D4  
 #define RST_PIN D3 
 //For Firebase & WiFi Connectivity
-#define FIREBASE_HOST "dummy-database-bc278-default-rtdb.firebaseio.com"  
-#define FIREBASE_AUTH "v1Ba9MecL92dlmHKcw5LHcutNlhGHhDVI09Y3Ibr"  
-#define WIFI_SSID "Padhyegurjar"
-#define WIFI_PASSWORD "mncb8tbbt8"
+#define FIREBASE_HOST ""  
+#define FIREBASE_AUTH ""  
+#define WIFI_SSID ""
+#define WIFI_PASSWORD ""
 //For MPU6050 - threshod for number of rotations
 #define Upper_Threshold 0.85 
 //For Button
